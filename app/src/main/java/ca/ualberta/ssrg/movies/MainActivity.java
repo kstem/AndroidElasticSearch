@@ -99,6 +99,10 @@ public class MainActivity extends Activity {
 	 */
 	public void search(View view) {
 		movies.clear();
+		
+		EditText myEditText   = (EditText)findViewById(R.id.editText1); 
+		SearchThread thread = new SearchThread(myEditText.getText().toString()); 
+ 		thread.start(); 
 
 		// TODO: Extract search query from text view
 		
